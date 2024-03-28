@@ -11,19 +11,19 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Configuration
 public class AdminConfig {
 
-    @Bean
-    WebMvcConfigurer mvcConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				 registry.addMapping("/**")
-	                .allowedOrigins("http://localhost:4200") // Add your frontend origin here
-	                .allowedMethods("GET", "POST", "PUT", "DELETE")
-	                .allowedHeaders("*")
-	                .allowCredentials(true);
-			}
-		};
-	}
+	
+
+		@Bean
+		protected WebMvcConfigurer corsConfigurer() {
+			return new WebMvcConfigurer() {
+				@Override
+				public void addCorsMappings(CorsRegistry registry) {
+					registry.addMapping("/").allowedMethods("*");
+				}
+			};
+		}
+
+	
 
 	@Bean
 	RestTemplate restTemplate() {

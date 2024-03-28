@@ -8,14 +8,17 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 
 public class PatientConfig {
-	@Bean
-	WebMvcConfigurer mvcConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedHeaders("*").allowedMethods("*").allowedOrigins("*");
-			}
-		};
+	
+
+		@Bean
+		protected WebMvcConfigurer corsConfigurer() {
+			return new WebMvcConfigurer() {
+				@Override
+				public void addCorsMappings(CorsRegistry registry) {
+					registry.addMapping("/").allowedMethods("*");
+				}
+			};
+		}
+
 	}
 
-}
