@@ -31,7 +31,7 @@ import com.patient.billing.service.service.PatientBillingService;
 
 @RestController
 @RequestMapping(path = "/patientbilling")
-@CrossOrigin(origins = "**")
+@CrossOrigin("*")
 
 
 public class PatientBillingController {

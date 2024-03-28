@@ -32,7 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/ward")
-@CrossOrigin(origins = "**")
+@CrossOrigin("*")
 
 public class WardController {
     

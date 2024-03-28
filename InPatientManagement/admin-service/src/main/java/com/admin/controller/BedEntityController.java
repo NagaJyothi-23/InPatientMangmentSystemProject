@@ -25,7 +25,7 @@ import com.admin.service.BedService;
 
 @Controller
 @RequestMapping("/bed")
-@CrossOrigin(origins = "**")
+@CrossOrigin("*")
 
 public class BedEntityController {
 

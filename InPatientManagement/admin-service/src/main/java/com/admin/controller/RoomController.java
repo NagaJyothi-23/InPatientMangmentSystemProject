@@ -27,7 +27,7 @@ import com.admin.service.RoomService;
 
 @RestController
 @RequestMapping("/room")
-@CrossOrigin(origins = "**")
+@CrossOrigin("*")
 
 public class RoomController {
 

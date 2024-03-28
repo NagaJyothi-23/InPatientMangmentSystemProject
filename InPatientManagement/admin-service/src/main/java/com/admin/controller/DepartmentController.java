@@ -26,7 +26,7 @@ import com.admin.service.DepartmentService;
 
 @RestController
 @RequestMapping("/department")
-@CrossOrigin(origins = "**")
+@CrossOrigin("*")
 
 public class DepartmentController {
 

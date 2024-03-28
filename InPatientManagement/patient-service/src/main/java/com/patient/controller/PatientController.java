@@ -28,7 +28,7 @@ import com.patient.service.PatientService;
 
 @RestController
 @RequestMapping("/patients")
-@CrossOrigin(origins = "**")
+@CrossOrigin("*")
 
 public class PatientController {
     private static final Logger log = LoggerFactory.getLogger(PatientController.class);

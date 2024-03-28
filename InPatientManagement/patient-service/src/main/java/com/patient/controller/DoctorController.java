@@ -27,7 +27,7 @@ import com.patient.service.DoctorService;
 
 @Controller
 @RequestMapping("/doctor")
-@CrossOrigin(origins = "**")
+@CrossOrigin("*")
 public class DoctorController {
 
     @Autowired

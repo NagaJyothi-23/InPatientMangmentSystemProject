@@ -24,7 +24,7 @@ import com.admin.service.RegistrationService;
  */
 @RestController
 @RequestMapping("register")
-@CrossOrigin(origins = "**")
+@CrossOrigin(origins = "*")
 public class RegistrationController {
 
     @Autowired
