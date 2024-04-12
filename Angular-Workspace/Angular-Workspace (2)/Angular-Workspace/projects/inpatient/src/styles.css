@@ -1,0 +1,17 @@
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+@import'../../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+/* Import Arial font from Google Fonts */
+
+
+/* Import SweetAlert2 styles */
+@import '../../../node_modules/sweetalert2/dist/sweetalert2.min.css';
+
+/* Define body styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
