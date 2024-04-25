@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 export class DoctorComponent {
   doctors: any[] = [];
   doctorName: '';
-
+  displayedColumns: string[] = ['name', 'status', 'departmentName', 'actions'];
   departments: Department[] = [];
   newDoctor: Doctor = {
     id: 0,

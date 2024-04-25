@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -40,6 +41,15 @@ import{MatSnackBarModule} from '@angular/material/snack-bar'
 import { AuthInterceptor } from './Auth/AuthInterceptor';
 import { AuthGuard } from './Auth/AuthGuard';
 import { Test1Component } from './test1/test1.component';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdddepartmentComponent } from './adddepartment/adddepartment.component';
+import { AddbedComponent } from './addbed/addbed.component';
 @NgModule({
   declarations:[
     AppComponent,
@@ -55,7 +65,6 @@ import { Test1Component } from './test1/test1.component';
     ReceptionComponent,
     DepartmentListComponent,
     WardComponent,
-    
     EditComponent,
     RoomComponent,
     AddroomComponent,
@@ -73,6 +82,8 @@ import { Test1Component } from './test1/test1.component';
     PopupsComponent,
     EditbedallocationComponent,
     Test1Component,
+    AdddepartmentComponent,
+    AddbedComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,7 +92,16 @@ import { Test1Component } from './test1/test1.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatTableModule,
+    MatIconModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
+
   ],
   providers: [
     provideAnimationsAsync(),

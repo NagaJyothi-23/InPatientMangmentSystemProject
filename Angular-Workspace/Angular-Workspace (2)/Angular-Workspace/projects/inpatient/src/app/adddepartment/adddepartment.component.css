@@ -1,0 +1,7 @@
+.department{
+    position: relative;
+    z-index: 1;
+    color: white;
+    top:250px;
+    left:200px;
+}

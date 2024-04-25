@@ -1,5 +1,6 @@
 package com.admin.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,7 +21,7 @@ public class BedEntity {
 	private int bedNo;
 	@Column(name = "status")
 	private String status;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "room_id", referencedColumnName = "room_id")
 	private RoomEntity roomId;
 

@@ -1,0 +1,10 @@
+<form #departmentForm="ngForm" (ngSubmit)="submitNewDepartment(departmentForm)" class="department">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Department Name" name="newDepartmentName" [(ngModel)]="newDepartmentName" required>
+      <mat-error *ngIf="departmentForm.controls['newDepartmentName'].invalid && (departmentForm.controls['newDepartmentName'].dirty || departmentForm.controls['newDepartmentName'].touched)">
+        Please enter a valid department name.
+      </mat-error>
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>

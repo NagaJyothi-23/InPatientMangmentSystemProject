@@ -11,8 +11,9 @@ import { ThisReceiver } from '@angular/compiler';
 })
 export class WardComponent implements OnInit {
     wards: Ward[] = [];
-   
     departments: Department[] = [];
+    displayedColumns: string[] = ['name', 'id', 'capacity','availability','status'];
+
     newWard: Ward = {
       id: 0,
       name: '',

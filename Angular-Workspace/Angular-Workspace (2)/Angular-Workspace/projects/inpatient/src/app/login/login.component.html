@@ -40,9 +40,7 @@
                 <a class="text-dark-50" routerLink="/forgot" onclick="click()" style="position:relative;bottom:95px;">Forgot password?</a><br>
                 <br>
                 <button class="btn btn-outline-dark btn-lg px-2 text-white bg-dark" type="submit" [disabled]="loginForm.invalid" style="position:relative;bottom:110px;width:120px;border-radius:10px;">Login</button>
-                <!-- style="position:relative;bottom:40px;left:670px;width:120px;border-radius:10px;" -->
-
-                <!-- <button type="submit">Login</button> -->
+                
   
               </form>
   
@@ -57,6 +55,9 @@
       </div>
     </div>
   </section>
+  <div class="spinner-border" role="status" *ngIf="isLoading" >
+    <span class="visually-hidden">Loading...</span>
+  </div>
 
 
   

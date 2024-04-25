@@ -1,0 +1,11 @@
+.mat-h2{
+    z-index: 1;position: relative;color: white; 
+}
+.mat-elevation-z8{
+    z-index: 1;position: relative;color: white;
+    background-color: aliceblue;right:200px;top:40px;
+}
+.col{
+    z-index: 1;position: relative;color: white; 
+    right:250px;top:60px;
+}

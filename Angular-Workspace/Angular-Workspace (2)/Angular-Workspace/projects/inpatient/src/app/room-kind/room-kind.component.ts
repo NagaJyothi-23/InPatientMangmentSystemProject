@@ -71,8 +71,6 @@ export class RoomKindComponent {
   loadRoomTypes(): void {
     this.roomTypeService.getAllRoomTypes().subscribe((roomTypes) => {
       this.roomTypes = roomTypes;
-      console.log(this.roomTypes);
-      
       this.editMode = Array(roomTypes.length).fill(false);
     });
   }

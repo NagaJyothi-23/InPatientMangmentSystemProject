@@ -23,7 +23,5 @@
 
 .pagination button:disabled {
   background-color: #cccccc; /* Grey background when disabled */
-  cursor: not-allowed; /* Not allowed cursor when disabled */
+  cursor: not-allowed; /* Not allowed cursor when disabled */
 }
-
-/* You can add more specific styling if needed */

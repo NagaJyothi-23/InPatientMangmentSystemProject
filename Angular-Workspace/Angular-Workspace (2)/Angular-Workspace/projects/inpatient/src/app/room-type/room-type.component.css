@@ -21,7 +21,7 @@
     height: 780px;
     padding: 0;
     margin: 0;
-    background:url('https://www.laudclinic.com/wp-content/uploads/2020/05/InPatient-Services.jpg');
+    /* background:url('https://www.laudclinic.com/wp-content/uploads/2020/05/InPatient-Services.jpg'); */
     background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 .container-fluid:before {
     position:absolute;
     width: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background:#66cccc;
     content:"";
     height: 780px;
 }

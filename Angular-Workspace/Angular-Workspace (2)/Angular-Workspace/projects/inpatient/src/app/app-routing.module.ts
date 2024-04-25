@@ -30,6 +30,8 @@ import { RoomComponent } from './room/room.component';
 import { SignupComponent } from './signup/signup.component';
 import { WardComponent } from './ward/ward.component';
 import { AuthGuard } from './Auth/AuthGuard';
+import { AdddepartmentComponent } from './adddepartment/adddepartment.component';
+import { AddbedComponent } from './addbed/addbed.component';
 
 const routes: Routes = [
 
@@ -50,6 +52,9 @@ const routes: Routes = [
             component: DepartmentListComponent,
           },
           {
+            path: 'department/add-department', component:AdddepartmentComponent,
+          },
+          {
             path: 'wards',
             component: WardComponent,
           },
@@ -64,6 +69,9 @@ const routes: Routes = [
             { path: 'rooms/editRoom/:id', component: EditroomComponent },
           { path: 'roomkind', component: RoomKindComponent },
           { path: 'bed', component: BedComponent },
+          {
+            path: 'bed/addbed',component:AddbedComponent
+          },
           { path: 'doctor', component: DoctorComponent },
           {
             path: 'billing',

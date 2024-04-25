@@ -1,0 +1,10 @@
+.mat-elevation-z8{
+    position: relative;
+    z-index: 1;
+    background-color: aliceblue;
+}
+.text-white{
+    position: relative;
+    z-index: 1;
+    color: white;  
+}

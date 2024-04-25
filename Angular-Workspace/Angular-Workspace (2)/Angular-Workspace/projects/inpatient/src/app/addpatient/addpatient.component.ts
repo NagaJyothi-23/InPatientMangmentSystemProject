@@ -5,8 +5,9 @@ import Swal from 'sweetalert2';
 import { BillingDto } from '../../Model/billingDto';
 import { PatientDto } from '../../Model/patientDto';
 import { RoomtypeDetailsService } from '../services/roomtype-details.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { FormBuilder, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
+import { NgModel } from '@angular/forms';
 @Component({
   selector: 'app-addpatient',
   templateUrl: './addpatient.component.html',

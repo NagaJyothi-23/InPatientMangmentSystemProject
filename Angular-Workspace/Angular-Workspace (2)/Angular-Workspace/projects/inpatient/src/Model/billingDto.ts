@@ -1,4 +1,8 @@
 export interface BillingDto {
+paymentStatus: any;
+bedAllocationId: any;
+billingDate: any;
+billId: any;
 id:number;
 firstName:string;
 lastName:string;

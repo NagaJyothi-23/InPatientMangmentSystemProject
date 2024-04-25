@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Add New Bed</h2>
+    <!-- Form for adding a new bed -->
+    <form  #bedForm="ngForm" (ngSubmit)="submitNewBed(bedForm)">
+      <div class="mb-3">
+        <label for="bedNo" class="form-label">Bed Number</label>
+        <input type="number" class="form-control" id="bedNo" [(ngModel)]="newBed.bedNo" name="bedNo" required>
+      </div>
+      <div class="mb-3">
+        <label for="roomId" class="form-label">Room ID</label>
+        <select class="form-select" id="roomId" [(ngModel)]="newBed.roomId" name="roomId" required>
+          <option *ngFor="let room of rooms" [ngValue]="room">{{ room.roomNo }} - {{ room.wardId.name }} - {{ room.wardId.departmentId.name }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>

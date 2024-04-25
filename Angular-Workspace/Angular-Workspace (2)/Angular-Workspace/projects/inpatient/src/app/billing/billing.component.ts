@@ -78,16 +78,6 @@ export class BillingComponent implements OnInit {
   delete(room: BillingDto) {
     room.id;
     alert(JSON.stringify(room));
-    const roomObject: BillingDto = {
-      id: room.id,
-      firstName: room.firstName,
-      lastName: room.lastName,
-      bedno: room.bedno,
-      paidAmount: room.paidAmount,
-      totalAmount: room.totalAmount,
-      status: room.status,
-      recordStatus: room.recordStatus,
-    };
     // this.service.deleteRoom(roomObject).subscribe(data=>console.log("deleted successfully")
     // )
   }

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
 import { Department } from '../../Model/department.model';
 import { DepartmentService } from '../services/department.service';
-import Swal from 'sweetalert2';
+import { Router, NavigationExtras } from '@angular/router';
+
+
 @Component({
   selector: 'app-departmentlist',
   templateUrl: './departmentlist.component.html',
@@ -23,7 +26,8 @@ export class DepartmentListComponent implements OnInit {
 
   constructor(
     private departmentService: DepartmentService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,11 +35,7 @@ export class DepartmentListComponent implements OnInit {
     this.getAll();
   }
 
-  addNewRow(): void {
-    console.log('Adding new row');
-    this.showNewRow = true;
-  }
-
+ 
   toggleEditMode(index: number): void {
     this.editMode[index] = !this.editMode[index];
   }
@@ -102,6 +102,7 @@ export class DepartmentListComponent implements OnInit {
 
   editDepartment(index: number): void {
     const department = this.departments[index];
+    console.log(department)
     if (department?.id !== undefined && department?.id !== null) {
       this.departmentService
         .updateDepartment(department.id, department)
@@ -157,5 +158,5 @@ export class DepartmentListComponent implements OnInit {
 
   isNextButtonDisabled(): boolean {
     return this.currentPage === Math.ceil(this.totalItems / this.pageSize);
-  }
+  }
 }

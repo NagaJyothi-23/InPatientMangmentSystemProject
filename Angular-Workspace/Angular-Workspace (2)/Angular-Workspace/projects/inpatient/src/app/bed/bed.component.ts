@@ -113,7 +113,7 @@ export class BedComponent {
         (error) => {
           console.error('Error deleting bed:', error);
         }
-      );
-    }
-  }
+      );
+    }
+  }
 }

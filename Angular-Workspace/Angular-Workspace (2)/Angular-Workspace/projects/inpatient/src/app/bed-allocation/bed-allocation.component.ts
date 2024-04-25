@@ -88,8 +88,9 @@ export class BedAllocationComponent implements OnInit {
     const selectedBedId = this.form.value.bedNo;
 
     this.bed = this.bedNumbers.find((bed) => bed.id == selectedBedId);
-
+    
     if (this.bed) {
+      alert("bed allocation")
       const formData = {
         patientNumber: this.form.value.patientId,
 
@@ -101,7 +102,7 @@ export class BedAllocationComponent implements OnInit {
       };
 
       this.http
-        .post('http://localhost:8083/bedAllocation/save', formData)
+        .post('http://localhost:8101/admin-service/bedAllocation/save', formData)
         .subscribe(
           (response) => {
             console.log('Form data sent successfully:', response);

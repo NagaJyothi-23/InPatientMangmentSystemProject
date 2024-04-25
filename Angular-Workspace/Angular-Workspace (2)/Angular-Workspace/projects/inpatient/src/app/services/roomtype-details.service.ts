@@ -67,14 +67,18 @@ export class RoomtypeDetailsService {
     return this.http.post<any[]>(`http://localhost:8101/admin-service/register/verify`, null, { headers, params });
   }
   sendOtp(email: string): Observable<any[]> {
-    return this.http.get<any>(`http://localhost:8101/admin-service/register/generateOtp?email=${email}`);
+    
+    const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' }).append('No-AUTH', 'True');
+    return this.http.get<any>(`http://localhost:8101/admin-service/register/generateOtp?email=${email}`,{headers});
 
   }
   password(email: string, password: string) {
     const params = new HttpParams()
       .set('email', email)
       .set('password', password);
-    return this.http.put<any>(`http://localhost:8101/admin-service/register/password`, {}, { params });
+      
+    const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' }).append('No-AUTH', 'True');
+    return this.http.put<any>(`http://localhost:8101/admin-service/register/password`, {headers}, { params });
   }
   getNumber(patientNumber: string): Observable<any> {
     const params = new HttpParams()

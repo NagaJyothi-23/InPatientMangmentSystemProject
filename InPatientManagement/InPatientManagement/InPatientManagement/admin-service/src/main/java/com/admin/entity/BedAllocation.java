@@ -2,6 +2,7 @@ package com.admin.entity;
 
 import java.sql.Date;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,7 +22,7 @@ public class BedAllocation {
 	private int id;
 	@Column(name = "patient_id")
 	private int patientId;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "bed_id", referencedColumnName = "bed_id")
 	private BedEntity bedId;
 	@Column(name = "no_of_days")

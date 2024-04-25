@@ -27,7 +27,7 @@ import com.admin.entity.BedAllocation;
 import com.admin.service.BedAllocationService;
 
 @RestController
-@RequestMapping(path = "bedAllocation")
+@RequestMapping(path = "/bedAllocation")
 @CrossOrigin("*")
 
 public class BedAllocationController {

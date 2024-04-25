@@ -12,6 +12,7 @@ import { AuthService } from '../services/AuthService';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
+
 export class LoginComponent implements OnInit {
   public email: string = '';
   public password: string = '';
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
   click() { }
   loginForm!: FormGroup;
   isLoggedIn: boolean = false;
+  isLoading: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -53,7 +55,7 @@ export class LoginComponent implements OnInit {
       this.details = JSON.stringify(this.values);
 
       console.log(this.details);
-
+      setTimeout(() => {
       this.service.loginDetails(this.details).subscribe(
         (response: any) => {
           Swal.fire({
@@ -93,6 +95,8 @@ export class LoginComponent implements OnInit {
           }
         }
       );
+       }, 2000);
     }
   }
+ 
 }

@@ -1,10 +1,98 @@
-input{
-    /* margin-right: 20px; */
-    margin-bottom: 15px;
-    /* margin-left: 20px; */
-    background-color: aliceblue;
-  }
-  label,input
-  {
-    margin-left: 20px;
-  }
+input {
+  /* margin-right: 20px; */
+  margin-bottom: 15px;
+  /* margin-left: 20px; */
+  background-color: aliceblue;
+}
+
+label,
+input {
+  margin-left: 20px;
+}
+
+.addpatient {
+  background-color: white;
+  width: 500px;
+  height: 60px;
+  z-index: 1;
+  position: relative;
+  top: 20px;
+  left: 470px;
+  border-radius: 10px;
+}
+
+.form-label {
+  z-index: 1;
+  position: relative;
+  color: black;
+  top: 20px;
+  left: 30px;
+}
+
+.form-control {
+  position: relative;
+  width: 200px;
+  bottom: 20px;
+  left: 160px;
+  border: 1px solid black;
+}
+
+.btn {
+  margin-left: 20px;
+  z-index: 1;
+  position: relative;
+  right: 100px;
+  top: 2px;
+  left: 350px;
+}
+
+.billing {
+  margin-top: 4px;
+  padding: 10px;
+  z-index: 1;
+  position: relative;
+  height: 500px;
+  width: 700px;
+}
+
+.billing-form {
+  border: 2px solid gray;
+  border-radius: 10px;
+  position: relative;
+  left: 20px;
+  width: 800px;
+  height: 595px;
+  z-index: 1;
+  background-color: white;
+  top: 10px;
+}
+
+.card-title {
+  text-align: center;
+  align-items: center;
+  margin-top: 10px
+}
+.roomdiv{
+  margin-left: 20px
+}
+.btn1{
+  position: relative;
+  left: 40%;
+  bottom: 30px;
+  background-color: black;
+  width: 120px;
+  height: 45px;
+  color: white;
+}
+.End-date{
+  margin-left: 20px; width: 230px
+}
+.No-days{
+  margin-left: 18px
+}
+.Contact-No{
+  margin-left: 20px
+}
+.Contact-No1{
+  margin-left: 30px
+}

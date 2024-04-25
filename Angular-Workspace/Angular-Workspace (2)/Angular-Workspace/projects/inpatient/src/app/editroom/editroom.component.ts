@@ -92,7 +92,7 @@ export class EditroomComponent implements OnInit {
       wardId: this.ward,
     };
 
-    this.http.put('http://localhost:8083/room/update', formData).subscribe(
+    this.http.put('http://localhost:8101/admin-service/room/update', formData).subscribe(
       (req) => {
         this.router.navigate(['dashboard/admin/rooms']);
       },
